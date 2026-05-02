@@ -19,7 +19,7 @@ KATAKANA = {
     "ka": "カ", "ki": "キ", "ku": "ク", "ke": "ケ", "ko": "コ",
     "sa": "サ", "shi": "シ", "su": "ス", "se": "セ", "so": "ソ",
     "ta": "タ", "chi": "チ", "tsu": "ツ", "te": "テ", "to": "ト",
-    "na": "ナ", "ni": "ニ", "nu": "ヌ", "ne": "ネ", "no": "ノ",
+    "na": "カ", "ni": "ニ", "nu": "ヌ", "ne": "ネ", "no": "ノ",
     "ha": "ハ", "hi": "ヒ", "fu": "フ", "he": "ヘ", "ho": "ホ",
     "ma": "マ", "mi": "ミ", "mu": "ム", "me": "メ", "mo": "モ",
     "ya": "ヤ", "yu": "ユ", "yo": "ヨ",
@@ -28,9 +28,9 @@ KATAKANA = {
 }
 
 KANJI = {
-    "日": "hi / nichi — day, sun",
-    "月": "tsuki / getsu — moon, month",
-    "人": "hito / jin — person"
+    "日": "hi / nichi - day, sun",
+    "月": "tsuki / getsu - moon, month",
+    "人": "hito / jin - person"
 }
 
 
@@ -40,7 +40,7 @@ def choose_mode():
     print("2) Katakana")
     print("3) Basic Kanji (3 characters)")
     print("4) Exit")
-    return input("Choose a mode (1–4): ").strip()
+    return input("Choose a mode (1-4): ").strip()
 
 
 def quiz(char_dict, mode_name):
@@ -61,7 +61,7 @@ def quiz(char_dict, mode_name):
         last_char = romaji
         character = char_dict[romaji]
 
-        answer = input(f"Character: {character} → reading: ").strip().lower()
+        answer = input(f"Character: {character} -> reading: ").strip().lower()
 
         if answer == "exit":
             break
@@ -69,10 +69,10 @@ def quiz(char_dict, mode_name):
         total += 1
 
         if answer == romaji:
-            print("✅ Correct!\n")
+            print("Correct!\n")
             correct += 1
         else:
-            print(f"❌ Wrong. Correct reading: {romaji}\n")
+            print(f"Wrong. Correct reading: {romaji}\n")
 
     if total > 0:
         accuracy = (correct / total) * 100
@@ -116,7 +116,7 @@ def main():
         elif choice == "3":
             quiz_kanji()
         elif choice == "4":
-            print("Goodbye! またね!")
+            print("Goodbye!")
             break
         else:
             print("Invalid choice.\n")
