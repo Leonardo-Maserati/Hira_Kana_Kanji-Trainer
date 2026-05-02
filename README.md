@@ -18,7 +18,7 @@ How to use it
 
 1. Make sure you have Python 3 installed.
 
-2. Run the script: python jp_script_trainer.py
+2. Run the script: Hira_Kana_Kanji-Trainer
 
 3. Choose a mode from the menu and start typing the romaji. 
 
